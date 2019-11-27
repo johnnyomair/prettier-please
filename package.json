@@ -1,0 +1,39 @@
+{
+  "name": "prettier-please",
+  "version": "1.0.0",
+  "description": "A CLI tool to setup Prettier and pre-commit hooks.",
+  "main": "index.js",
+  "bin": {
+    "prettier-please": "./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnnyomair/prettier-please.git"
+  },
+  "keywords": [
+    "Prettier",
+    "Husky",
+    "lint-staged"
+  ],
+  "author": "Johannes Obermair (https://www.johannesobermair.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/johnnyomair/prettier-please/issues"
+  },
+  "homepage": "https://github.com/johnnyomair/prettier-please#readme",
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "cross-spawn": "^7.0.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
