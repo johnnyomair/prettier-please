@@ -54,7 +54,7 @@ Example:
 {
   "lint-staged": {
 -   "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
-+   "code/**/*.{php,html,yml}
++   "code/**/*.{php,html,yml}": [
       "prettier --write",
       "git add"
     ]
@@ -68,4 +68,4 @@ Good question! While using Prettier inside your editor might be sufficient when 
 
 ## Is this for JavaScript projects only? Can I use Prettier to format my PHP code?
 
-Nope! (Although you'll need a `package.json` file). Prettier can be configured to work with languages different than JavaScript. For more info, visit the official [Prettier documentation](https://prettier.io/).
+Nope! (Although you'll need a `package.json`). Prettier can be configured to work with languages different than JavaScript. For more info, visit the official [Prettier documentation](https://prettier.io/).
