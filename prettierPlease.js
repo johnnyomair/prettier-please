@@ -42,7 +42,7 @@ const prettierPlease = async () => {
     process.exit(1);
   }
 
-  const packageJson = JSON.parse(fs.readFileSync(packageJsonFile));
+  let packageJson = JSON.parse(fs.readFileSync(packageJsonFile));
   const projectName = packageJson.name;
 
   console.log(`Setting up Prettier for project ${chalk.green(projectName)}.`);
@@ -67,6 +67,9 @@ const prettierPlease = async () => {
     console.error(chalk.red("Failed to install dependencies."));
     process.exit(1);
   }
+
+  // Read package.json again to not override devDependencies.
+  packageJson = JSON.parse(fs.readFileSync(packageJsonFile));
 
   packageJson["husky"] = {
     hooks: {

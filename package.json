@@ -25,13 +25,18 @@
     "chalk": "^3.0.0",
     "cross-spawn": "^7.0.1"
   },
+  "devDependencies": {
+    "husky": "^4.0.1",
+    "lint-staged": "^9.5.0",
+    "prettier": "^1.19.1"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+    "*.{js,md}": [
       "prettier --write",
       "git add"
     ]
