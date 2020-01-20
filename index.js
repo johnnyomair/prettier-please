@@ -3,7 +3,7 @@
 var currentNodeVersion = process.versions.node;
 var [major, minor] = currentNodeVersion.split(".");
 
-if (major < 8 || minor < 6) {
+if (major < 8 && minor < 6) {
   console.error(
     "You are running Node " +
       currentNodeVersion +
