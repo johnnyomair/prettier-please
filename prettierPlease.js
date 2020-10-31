@@ -36,7 +36,7 @@ const prettierPlease = async () => {
   if (!fs.existsSync(packageJsonFile)) {
     console.error(
       chalk.red(
-        `Cant' find package.json. Please execute inside the root of the project.`
+        `Can't find package.json. Please execute inside the root of the project.`
       )
     );
     process.exit(1);
