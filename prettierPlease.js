@@ -36,7 +36,7 @@ const prettierPlease = async () => {
   if (!fs.existsSync(packageJsonFile)) {
     console.error(
       chalk.red(
-        `Cant' find package.json. Please execute inside the root of the project.`
+        `Can't find package.json. Please execute inside the root of the project.`
       )
     );
     process.exit(1);
@@ -83,7 +83,7 @@ const prettierPlease = async () => {
 
   fs.writeFileSync("package.json", JSON.stringify(packageJson, null, 2));
 
-  console.log(`Sucess! Added Prettier to project ${packageJson.name}.`);
+  console.log(`Success! Added Prettier to project ${packageJson.name}.`);
   console.log();
   console.log("I suggest that you format your existing code by typing:");
   console.log();
